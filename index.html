@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Book Store</title>
+    <!-- Add Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-900 via-purple-800 to-red-700 text-white font-poppins">
+    <!-- Navigation Bar -->
+    <nav class="bg-black bg-opacity-50 p-6 shadow-xl fixed w-full top-0 z-10">
+        <ul class="flex justify-center space-x-8 text-lg font-bold tracking-wide">
+            <li><a href="pages/homepage.html" class="text-white hover:text-yellow-500">Home</a></li>
+            <li><a href="pages/shop.html" class="text-white hover:text-yellow-500">Shop</a></li>
+            <li><a href="pages/cart.html" class="text-white hover:text-yellow-500">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex flex-col items-center justify-center min-h-screen pt-24">
+        <h1 class="text-6xl font-extrabold mb-6 text-yellow-300 drop-shadow-lg">Welcome to the Comic Book Store</h1>
+        <p class="text-2xl mb-10">Your ultimate destination for comic book lovers.</p>
+ <!-- Call to Action -->
+ <div class="mb-8 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-yellow-300">Explore Our Latest Collection!</h2>
+    <p class="text-lg mb-4">Dive into the world of superheroes, villains, and epic adventures. Start your comic book journey today!</p>
+    <a href="pages/shop.html" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition-all duration-300">Shop Now</a>
+</div>
+        <!-- Image Placeholder -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300">
+            <img src="https://2.bp.blogspot.com/-JExxv0U879Y/WUSW1q2ECII/AAAAAAAABsU/gMX4P43TOqEyMfF-hMCay57F2eTKXIe0gCLcBGAs/s1600/Picture1.jpg" alt="Comic Book Cover" class="rounded-md shadow-lg">
+            <p class="mt-4 text-gray-300 text-center">Featured Comic Book</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-70 py-6 text-center text-gray-200">
+        <p class="text-lg">&copy; 2024 Comic Book Store | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

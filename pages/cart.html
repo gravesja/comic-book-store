@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Cart</title>
+    <!-- Add Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 via-purple-800 to-red-700 text-white">
+
+    <!-- Header -->
+    <header class="bg-black bg-opacity-60 py-4 px-6 shadow-md flex justify-between items-center">
+        <h1 class="text-4xl font-bold text-yellow-500">Comic Book Store - Cart</h1>
+        <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-600" onclick="goToShop()">Continue Shopping</button>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-black bg-opacity-60 py-4 text-center">
+        <ul class="flex justify-center space-x-6 text-lg font-bold">
+            <li><a href="../index.html" class="text-white hover:text-yellow-500">Home</a></li>
+            <li><a href="../pages/shop.html" class="text-white hover:text-yellow-500">Shop</a></li>
+            <li><a href="../pages/cart.html" class="text-white hover:text-yellow-500">Cart</a></li>
+            <li><a href="../pages/checkout.html" class="text-white hover:text-yellow-500">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-10">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-center mb-10 text-yellow-300">Your Cart</h2>
+
+            <!-- Cart Items -->
+            <div id="cart" class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+
+            <!-- Total Section -->
+            <div class="text-right text-2xl font-bold mb-6">
+                <strong>Total: $<span id="total">0.00</span></strong>
+            </div>
+
+            <!-- Checkout Button -->
+            <div class="text-center">
+                <button class="bg-yellow-500 text-black px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-600 transition-colors duration-300" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-70 py-6 text-center text-gray-200">
+        <p class="text-lg">&copy; 2024 Comic Book Store | All rights reserved</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

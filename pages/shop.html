@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Book Store - Shop</title>
+    <!-- Add Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .comic-grid img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-900 via-purple-800 to-red-700 text-white">
+
+    <!-- Header with Search Bar and Cart -->
+    <header class="bg-black bg-opacity-60 py-4 px-6 shadow-md flex justify-between items-center">
+        <h1 class="text-4xl font-bold text-yellow-500">Comic Book Store</h1>
+        <div class="flex items-center space-x-4">
+            <input type="text" id="search-bar" placeholder="Search for comics..." class="px-4 py-2 rounded-full">
+            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-600" onclick="searchComics()">Search</button>
+            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-600" id="cart-button" onclick="goToCart()">Cart</button>
+            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-600" onclick="goToHomepage()">Back to Homepage</button>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-black bg-opacity-60 py-4 text-center">
+        <ul class="flex justify-center space-x-6 text-lg font-bold">
+            <li><a href="../index.html" class="text-white hover:text-yellow-500">Home</a></li>
+            <li><a href="../pages/shop.html" class="text-white hover:text-yellow-500">Shop</a></li>
+            <li><a href="../pages/cart.html" class="text-white hover:text-yellow-500">Cart</a></li>
+            <li><a href="../pages/checkout.html" class="text-white hover:text-yellow-500">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-5xl font-extrabold text-center mb-10 text-yellow-300">Explore Our Collection</h2>
+
+            <!-- Comic Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 comic-grid">
+                <!-- Comic Items -->
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic1.jpg" alt="Comic 1">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">Hulk vs The Thing</h2>
+                        <p>The hulk and the thing share dinner then fight.</p>
+                        <p class="font-semibold text-yellow-300">Price: $4</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('Hulk vs The Thing', 4)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic2.jpg" alt="Comic 2">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">Superman!</h2>
+                        <p>Superman saves the world!</p>
+                        <p class="font-semibold text-yellow-300">Price: $5</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('Superman!', 5)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic3.jpg" alt="Comic 3">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">Ironman vs mastermold</h2>
+                        <p>Ironman in the middle of his fight with mastermold gets caught in his trap! Can he escape?</p>
+                        <p class="font-semibold text-yellow-300">Price: $7</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('Ironman vs mastermold', 7)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic4.jpg" alt="Comic 4">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">The Amazing Spider-Man: The rumors are true</h2>
+                        <p>Introducing the new black suited Spider-Man.</p>
+                        <p class="font-semibold text-yellow-300">Price: $11</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('The Amazing Spider-Man: The rumors are true', 11)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic5.jpg" alt="Comic 5">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">Superior Spider-Man and Black Cat</h2>
+                        <p>Who is the superior Spider-Man?</p>
+                        <p class="font-semibold text-yellow-300">Price: $5</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('Superior Spider-Man and Black Cat', 5)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic6.jpg" alt="Comic 6">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">World War Hulk!</h2>
+                        <p>Hulk declares war on the world! Can they survive?</p>
+                        <p class="font-semibold text-yellow-300">Price: $20</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('World War Hulk!', 20)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic7.jpg" alt="Comic 7">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">All Star Superman</h2>
+                        <p>Superman is dying... explore the mind of a dying hero who simply loves the world.</p>
+                        <p class="font-semibold text-yellow-300">Price: $9</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('All Star Superman', 9)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="../images/comic8.jpg" alt="Comic 8">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">Spider-Man vs. The Sinister Six</h2>
+                        <p>Spider-Man must fight six villains! This is his biggest challenge yet! Can he do it alone?</p>
+                        <p class="font-semibold text-yellow-300">Price: $7</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('Spider-Man vs. The Sinister Six', 7)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="comic-item bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://th.bing.com/th/id/OIP._1D9eXHiDR7OKxcXSGrVzAHaLc?rs=1&pid=ImgDetMain" alt="Comic 9">
+                    <div class="comic-description mt-4 text-center">
+                        <h2 class="text-xl font-bold text-yellow-400">Iron Man: Armor Wars</h2>
+                        <p>Iron Man’s technology falls into the wrong hands. Who will stop this chaos?</p>
+                        <p class="font-semibold text-yellow-300">Price: $12</p>
+                        <button class="bg-yellow-500 text-black px-4 py-2 rounded-full mt-2 hover:bg-yellow-600" onclick="addToCart('Iron Man: Armor Wars', 12)">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-70 py-6 text-center text-gray-200">
+        <p class="text-lg">&copy; 2024 Comic Book Store | All rights reserved</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+/* More colorful theme */
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+header {
+    background-color: #ff6347; /* Tomato red header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#search-bar {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ffa500; /* Orange border */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #32cd32; /* Lime green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #228b22; /* Darker green on hover */
+}
+
+.comic-item {
+    border: 2px solid #87ceeb; /* Sky blue border */
+    background-color: #fffacd; /* Lemon chiffon background */
+}
+
+.comic-description h2 {
+    color: #ff4500; /* Orange red text */
+}
+
+.comic-description p {
+    color: #4682b4; /* Steel blue text */
+}
+
+.comic-description button {
+    background-color: #ffa500; /* Orange button */
+}
+
+.comic-description button:hover {
+    background-color: #ff4500; /* Orange red on hover */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #333;
+    padding: 1em;
+}
